@@ -1,16 +1,20 @@
-## Hi there 👋
+# Página de Vendas - Cursos e E-books
 
-<!--
-**irmoneto/IRMONETO** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Página de vendas dos meus produtos digitais sobre Análise da Personalidade pelos Pés.
 
-Here are some ideas to get you started:
+## Sobre
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+Site com meus cursos e e-books disponíveis na plataforma Eduzz.
+
+## Autor
+
+**Irmo Zuccato Neto**  
+Especialista em Análise da Personalidade pelos Pés
+
+## Acesso
+
+Visite: https://irmoneto.github.io
+
+---
+
+© 2000 Irmo Zuccato Neto - Todos os direitos reservados
