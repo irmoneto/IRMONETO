@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos e E-books - Análise da Personalidade pelos Pés</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px 60px;
+            color: white;
+        }
+
+        .logo {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 20px;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3));
+            mix-blend-mode: multiply;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .autor {
+            font-size: 1.4em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            opacity: 0.95;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .secao {
+            margin: 40px 0;
+        }
+
+        .secao-titulo {
+            color: white;
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .produtos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            padding: 20px 0;
+        }
+
+        .produto-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .produto-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .tipo-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.85em;
+        }
+
+        .badge-curso {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .badge-ebook {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+        }
+
+        .produto-card h2 {
+            color: #667eea;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            margin-top: 25px;
+            min-height: 60px;
+        }
+
+        .produto-card p {
+            color: #666;
+            margin-bottom: 25px;
+            flex-grow: 1;
+        }
+
+        .btn-comprar {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-comprar:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        .btn-ebook {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            box-shadow: 0 4px 15px rgba(240, 147, 251, 0.4);
+        }
+
+        .btn-ebook:hover {
+            box-shadow: 0 6px 20px rgba(240, 147, 251, 0.6);
+        }
+
+        .destaque {
+            border: 3px solid #ffd700;
+        }
+
+        .destaque::after {
+            content: "⭐ DESTAQUE";
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ffd700;
+            color: #333;
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .produtos {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="https://raw.githubusercontent.com/irmoneto/Analisador-Personalidade-Pelos-P-s/main/IMAGENS%20APP/LOGO.jpg" alt="IZN - Análise dos Pés BNV">
+            </div>
+            <p class="autor">IRMO ZUCCATO NETO</p>
+            <h1>Meus Cursos e E-books</h1>
+            <p>Análise da Personalidade pelos Pés</p>
+        </header>
+
+        <!-- CURSO -->
+        <div class="secao">
+            <h2 class="secao-titulo">📚 Curso Completo</h2>
+            <div class="produtos">
+                <div class="produto-card destaque">
+                    <span class="tipo-badge badge-curso">CURSO</span>
+                    <h2>MÓDULO BÁSICO – ANÁLISE DA PERSONALIDADE PELOS PÉS</h2>
+                    <p>Curso completo com toda a base necessária para começar a praticar a análise da personalidade pelos pés de forma profissional. Aprenda através de vídeo-aulas e material didático completo.</p>
+                    <a href="https://chk.eduzz.com/2172958" class="btn-comprar" target="_blank">QUERO ESSE CURSO</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- E-BOOKS -->
+        <div class="secao">
+            <h2 class="secao-titulo">📖 E-books Exclusivos</h2>
+            <div class="produtos">
+                <div class="produto-card">
+                    <span class="tipo-badge badge-ebook">E-BOOK</span>
+                    <h2>B-A-BA DA ANÁLISE DA PERSONALIDADE PELOS PÉS</h2>
+                    <p>Aprenda os fundamentos essenciais da análise da personalidade através dos pés. Ideal para iniciantes que desejam descobrir esta técnica fascinante.</p>
+                    <a href="https://chk.eduzz.com/1878274" class="btn-comprar btn-ebook" target="_blank">COMPRAR E-BOOK</a>
+                </div>
+
+                <div class="produto-card">
+                    <span class="tipo-badge badge-ebook">E-BOOK</span>
+                    <h2>OS ALIMENTOS E OS PÉS</h2>
+                    <p>Descubra a conexão surpreendente entre alimentação e as características reveladas pelos pés. Uma abordagem única e holística.</p>
+                    <a href="https://chk.eduzz.com/1975089" class="btn-comprar btn-ebook" target="_blank">COMPRAR E-BOOK</a>
+                </div>
+
+                <div class="produto-card">
+                    <span class="tipo-badge badge-ebook">E-BOOK</span>
+                    <h2>O PODER DO PROCESSO CATÁRTICO</h2>
+                    <p>Compreenda como o processo catártico pode transformar sua prática terapêutica e aprofundar suas sessões.</p>
+                    <a href="https://chk.eduzz.com/2042456" class="btn-comprar btn-ebook" target="_blank">COMPRAR E-BOOK</a>
+                </div>
+
+                <div class="produto-card">
+                    <span class="tipo-badge badge-ebook">E-BOOK</span>
+                    <h2>O PODER DA CUMPLICIDADE DENTRO DAS TERAPIAS CORPORAIS</h2>
+                    <p>Desenvolva uma conexão profunda com seus clientes e potencialize os resultados das suas terapias corporais.</p>
+                    <a href="https://chk.eduzz.com/6W4VNYOA0Z" class="btn-comprar btn-ebook" target="_blank">COMPRAR E-BOOK</a>
+                </div>
+
+                <div class="produto-card">
+                    <span class="tipo-badge badge-ebook">E-BOOK</span>
+                    <h2>OS PÉS DA INOCÊNCIA AO EROTISMO</h2>
+                    <p>Explore as diferentes dimensões da expressão humana através da análise dos pés, desde a inocência até aspectos mais profundos da personalidade.</p>
+                    <a href="https://chk.eduzz.com/KW8KJ28K01" class="btn-comprar btn-ebook" target="_blank">COMPRAR E-BOOK</a>
+                </div>
+
+                <div class="produto-card">
+                    <span class="tipo-badge badge-ebook">E-BOOK</span>
+                    <h2>O CÓDIGO KALI</h2>
+                    <p>Desvende os mistérios deste método exclusivo e transforme sua compreensão sobre análise corporal e personalidade.</p>
+                    <a href="https://chk.eduzz.com/7WXQJYQ29A" class="btn-comprar btn-ebook" target="_blank">COMPRAR E-BOOK</a>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Todos os produtos são oferecidos através da plataforma Eduzz</p>
+            <p>Pagamento 100% seguro • Acesso imediato após aprovação</p>
+        </footer>
+    </div>
+</body>
+</html>
